@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<web7.Data.Product>
+
+@foreach (var p in Model)
+{
+    <div class="prod_box">
+        <div class="center_prod_box">
+            <div class="product_title"><a href="http://all-free-download.com/free-website-templates/">@p.Name</a></div>
+            <div class="product_img">
+                <a href="http://all-free-download.com/free-website-templates/">
+                    <a asp-controller="Product" asp-action="Detail" asp-route-id="@p.Id">
+                        <img src="~/assets/images/@p.Hinh" alt="Error Image" border="0" />
+                    </a>
+                </a>
+            </div>
+            <div class="prod_price"><span class="reduce">350$</span> <span class="price">@p.Gia</span></div>
+        </div>
+        <div class="prod_details_tab"> <a href="http://all-free-download.com/free-website-templates/" class="prod_buy">Add to Cart</a> <a href="http://all-free-download.com/free-website-templates/" class="prod_details">Details</a> </div>
+    </div>
+}

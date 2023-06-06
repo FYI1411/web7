@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model web7.Data.Product
+
+<div class="center_content container">
+    <div id="content">
+        <div class="oferta" style="height:100%; background-color: ghostwhite; padding-bottom: 10px;">
+            <a rel="lightbox[portfolio]" href="~/assets/images/@Model.Hinh" title="@Model.Name">
+                <img src="~/assets/images/@Model.Hinh" width="165" height="113" border="0" class="oferta_img" alt="Error Image" />
+            </a>
+            <div class="oferta_details">
+                <div class="oferta_title">@Model.Name</div>
+                <div class="oferta_text">@Model.Description</div>
+                <div>
+                    <table>
+                        <tr>
+                            <td height="30" width="160">Price:</td>
+                            <td>@Model.Gia</td>
+                        </tr>
+                        <tr>
+                            <td height="30">Availability:</td>
+                            <td>In Stock</td>
+                        </tr>
+                        <tr>
+                            <td height="30">Model:</td>
+                            <td>Product 14</td>
+                        </tr>
+                        <tr>
+                            <td height="30">Manufacturer:</td>
+                            <td>Apple</td>
+                        </tr>
+                        <tr><td height="30">Quantity</td><td><input type="text" value="1" style="width: 20px; text-align: right" /></td></tr>
+                    </table>
+                    <a href="shoppingcart.html" class="add_to_cart">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
